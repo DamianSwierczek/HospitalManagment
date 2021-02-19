@@ -51,8 +51,10 @@ namespace HospitalManagment
 
             Doctor doctorObject = new Doctor()
             {
-                Name = "Dr Someone",
-                Qualification = "Some Qualification"
+                Name = txtName.Text,
+                Qualification = txtQualification.Text,
+                Specialization = txtSpecialization.Text,
+                Gender = txtGender.Text
 
 
             };
@@ -66,6 +68,26 @@ namespace HospitalManagment
             HospitalManagementDBEntities db = new HospitalManagementDBEntities();
 
             this.gridDoctors.ItemsSource = db.Doctors.ToList();
+        }
+
+        private void gridDoctors_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Console.WriteLine(this.gridDoctors.SelectedItems);
+        }
+
+        private void BtnUpdateDoctors_Click(object sender, RoutedEventArgs e)
+        {
+            HospitalManagementDBEntities db = new HospitalManagementDBEntities();
+
+            var r = from d in db.Doctors
+                  where d.Id == 1
+                  select d;
+            
+           foreach (var item in r)
+            {
+                MessageBox.Show(item.Name);
+            }
+
         }
     }
 }

@@ -22,6 +22,7 @@
         <Button HorizontalAlignment="Left" Margin="19,279,0,0" VerticalAlignment="Top" Width="75">
             <Button x:Name ="btnLoadDoctors" Content="Load Doctors" Height="20" Width="73" Click="BtnLoadDoctors_Click"/>
         </Button>
+        <Button x:Name="btnUpdateDoctors" Content="Update Doctors" HorizontalAlignment="Left" Margin="698,283,0,0" VerticalAlignment="Top" Width="75" Click="BtnUpdateDoctors_Click"/>
 
     </Grid>
 </Window>
