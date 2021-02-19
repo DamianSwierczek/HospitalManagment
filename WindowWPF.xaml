@@ -8,18 +8,18 @@
         Title="WindowWPF" Height="450" Width="800">
     <Grid>
         <DataGrid x:Name ="gridDoctors" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="536" Margin="10,300,0,0" SelectionChanged="gridDoctors_SelectionChanged_1"/>
-        <Label Content="Name:" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Height="28" Width="47"/>
-        <TextBox x:Name ="txtName" HorizontalAlignment="Left" Height="23" Margin="99,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-3.442,-4.57"/>
-        <Label Content="Specialization:" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Height="28" Width="84"/>
-        <TextBox x:Name ="txtSpecialization" HorizontalAlignment="Left" Height="23" Margin="99,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-3.442,-4.57"/>
-        <Label Content="Qualification:" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top" Height="28" Width="84"/>
-        <TextBox x:Name ="txtQualification" HorizontalAlignment="Left" Height="23" Margin="99,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-3.442,-4.57"/>
-        <Label Content="Gender:" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" Height="28" Width="84"/>
-        <TextBox x:Name ="txtGender" HorizontalAlignment="Left" Height="23" Margin="99,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-3.442,-4.57"/>
-        <Button HorizontalAlignment="Left" Margin="144,156,0,0" VerticalAlignment="Top" Width="75">
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="292,52,0,0" VerticalAlignment="Top" Height="28" Width="47"/>
+        <TextBox x:Name ="txtName" HorizontalAlignment="Left" Height="23" Margin="381,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-3.442,-4.57"/>
+        <Label Content="Specialization:" HorizontalAlignment="Left" Margin="292,80,0,0" VerticalAlignment="Top" Height="28" Width="84"/>
+        <TextBox x:Name ="txtSpecialization" HorizontalAlignment="Left" Height="23" Margin="381,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-3.442,-4.57"/>
+        <Label Content="Qualification:" HorizontalAlignment="Left" Margin="292,104,0,0" VerticalAlignment="Top" Height="28" Width="84"/>
+        <TextBox x:Name ="txtQualification" HorizontalAlignment="Left" Height="23" Margin="381,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-3.442,-4.57"/>
+        <Label Content="Gender:" HorizontalAlignment="Left" Margin="292,132,0,0" VerticalAlignment="Top" Height="28" Width="84"/>
+        <TextBox x:Name ="txtGender" HorizontalAlignment="Left" Height="23" Margin="381,136,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-3.442,-4.57"/>
+        <Button HorizontalAlignment="Left" Margin="426,171,0,0" VerticalAlignment="Top" Width="75">
             <Button x:Name="btnAdd" Content="Add" Height="21" Width="75" Click="BtnAdd_Click"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="10,278,0,0" VerticalAlignment="Top" Width="103" Height="28">
+        <Button HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top" Width="103" Height="28">
             <Button x:Name ="btnLoadDoctors" Content="Load Doctors" Height="18" Width="93" Click="BtnLoadDoctors_Click"/>
         </Button>
         <Button x:Name="btnUpdateDoctors" Content="Update Doctors" HorizontalAlignment="Left" Margin="678,270,0,0" VerticalAlignment="Top" Width="96" Click="BtnUpdateDoctors_Click" Height="28"/>
@@ -31,6 +31,7 @@
         <TextBox x:Name ="txtQualification2" HorizontalAlignment="Left" Height="23" Margin="654,359,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-3.442,-4.57"/>
         <Label Content="Gender:" HorizontalAlignment="Left" Margin="565,383,0,0" VerticalAlignment="Top" Height="28" Width="84"/>
         <TextBox x:Name ="txtGender2" HorizontalAlignment="Left" Height="23" Margin="654,387,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-3.442,-4.57"/>
+        <Button x:Name="btnDeleteDoctor" Content="Delete Doctor" HorizontalAlignment="Left" Margin="450,267,0,0" VerticalAlignment="Top" Width="96" Click="BtnDeleteDoctor_Click" Height="28"/>
 
     </Grid>
 </Window>

@@ -118,5 +118,35 @@ namespace HospitalManagment
                 }
             }
         }
+
+        private void BtnDeleteDoctor_Click(object sender, RoutedEventArgs e)
+        {
+
+            MessageBoxResult msgBoxResult = MessageBox.Show("Are you sure you want to delete?", "Delete Doctor",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Warning,
+                MessageBoxResult.No
+                );
+
+            if(msgBoxResult == MessageBoxResult.Yes) { 
+            HospitalManagementDBEntities db = new HospitalManagementDBEntities();
+
+            
+            var r = from d in db.Doctors
+                    where d.Id == this.updatingDoctorID
+                    select d;
+
+            Doctor obj = r.SingleOrDefault();
+
+            if (obj != null)
+            {
+                db.Doctors.Remove(obj);
+                db.SaveChanges();
+            }
+
+
+        }
+        }
     }
+    
 }
