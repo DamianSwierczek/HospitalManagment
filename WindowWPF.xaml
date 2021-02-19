@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="WindowWPF" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name ="gridDoctors" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="784" Margin="10,310,-0.4,0"/>
+        <DataGrid x:Name ="gridDoctors" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="536" Margin="10,300,0,0" SelectionChanged="gridDoctors_SelectionChanged_1"/>
         <Label Content="Name:" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Height="28" Width="47"/>
         <TextBox x:Name ="txtName" HorizontalAlignment="Left" Height="23" Margin="99,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-3.442,-4.57"/>
         <Label Content="Specialization:" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Height="28" Width="84"/>
@@ -19,10 +19,18 @@
         <Button HorizontalAlignment="Left" Margin="144,156,0,0" VerticalAlignment="Top" Width="75">
             <Button x:Name="btnAdd" Content="Add" Height="21" Width="75" Click="BtnAdd_Click"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="19,279,0,0" VerticalAlignment="Top" Width="75">
-            <Button x:Name ="btnLoadDoctors" Content="Load Doctors" Height="20" Width="73" Click="BtnLoadDoctors_Click"/>
+        <Button HorizontalAlignment="Left" Margin="10,278,0,0" VerticalAlignment="Top" Width="103" Height="28">
+            <Button x:Name ="btnLoadDoctors" Content="Load Doctors" Height="18" Width="93" Click="BtnLoadDoctors_Click"/>
         </Button>
-        <Button x:Name="btnUpdateDoctors" Content="Update Doctors" HorizontalAlignment="Left" Margin="698,283,0,0" VerticalAlignment="Top" Width="75" Click="BtnUpdateDoctors_Click"/>
+        <Button x:Name="btnUpdateDoctors" Content="Update Doctors" HorizontalAlignment="Left" Margin="678,270,0,0" VerticalAlignment="Top" Width="96" Click="BtnUpdateDoctors_Click" Height="28"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="565,303,0,0" VerticalAlignment="Top" Height="28" Width="47"/>
+        <TextBox x:Name ="txtName2" HorizontalAlignment="Left" Height="23" Margin="654,303,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-3.442,-4.57"/>
+        <Label Content="Specialization:" HorizontalAlignment="Left" Margin="565,331,0,0" VerticalAlignment="Top" Height="28" Width="84"/>
+        <TextBox x:Name ="txtSpecialization2" HorizontalAlignment="Left" Height="23" Margin="654,331,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-3.442,-4.57"/>
+        <Label Content="Qualification:" HorizontalAlignment="Left" Margin="565,355,0,0" VerticalAlignment="Top" Height="28" Width="84"/>
+        <TextBox x:Name ="txtQualification2" HorizontalAlignment="Left" Height="23" Margin="654,359,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-3.442,-4.57"/>
+        <Label Content="Gender:" HorizontalAlignment="Left" Margin="565,383,0,0" VerticalAlignment="Top" Height="28" Width="84"/>
+        <TextBox x:Name ="txtGender2" HorizontalAlignment="Left" Height="23" Margin="654,387,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-3.442,-4.57"/>
 
     </Grid>
 </Window>

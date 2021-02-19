@@ -70,24 +70,53 @@ namespace HospitalManagment
             this.gridDoctors.ItemsSource = db.Doctors.ToList();
         }
 
-        private void gridDoctors_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Console.WriteLine(this.gridDoctors.SelectedItems);
-        }
+ 
+       
 
         private void BtnUpdateDoctors_Click(object sender, RoutedEventArgs e)
         {
             HospitalManagementDBEntities db = new HospitalManagementDBEntities();
 
             var r = from d in db.Doctors
-                  where d.Id == 1
+                    where d.Id == this.updatingDoctorID
                   select d;
-            
-           foreach (var item in r)
+
+            Doctor obj = r.SingleOrDefault();
+
+          if(obj != null)
             {
-                MessageBox.Show(item.Name);
+                obj.Name = this.txtName2.Text;
+                obj.Specialization = this.txtSpecialization2.Text;
+                obj.Qualification = this.txtQualification2.Text;
+                obj.Gender = this.txtGender2.Text;
             }
 
+            db.SaveChanges();
+
+        }
+
+        private int updatingDoctorID = 0;
+        private void gridDoctors_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            {
+                if (this.gridDoctors.SelectedIndex >= 0)
+                {
+                    if (this.gridDoctors.SelectedItems.Count >= 0)
+                    {
+                        if (this.gridDoctors.SelectedItems[0].GetType() == typeof(Doctor))
+                        {
+                            Doctor d = (Doctor)this.gridDoctors.SelectedItems[0];
+                            this.txtName2.Text = d.Name;
+                            this.txtSpecialization2.Text = d.Specialization;
+                            this.txtQualification2.Text = d.Qualification;
+                            this.txtGender2.Text = d.Gender;
+                            this.updatingDoctorID = d.Id;
+                        }
+
+
+                    }
+                }
+            }
         }
     }
 }
