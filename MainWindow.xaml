@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:HospitalManagment"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="#FFFFC0C0">
+        <Button Content="Start" HorizontalAlignment="Left" Margin="359,230,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Label Content="Want to see a best hospital management ever? Click &quot;Start&quot; " HorizontalAlignment="Left" Margin="246,173,0,0" VerticalAlignment="Top" Height="38" Width="337"/>
+
     </Grid>
 </Window>
